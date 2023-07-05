@@ -22,7 +22,9 @@ Route::get('/', function () {
 Route::group(['middleware'=>['auth','admin']],function(){
     Route::prefix('/admin')->name('admin.')->group(function (){
         Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
-        Route::get('/pengguna',[UserController::class,'index'])->name('user');
+        Route::get('/user',[UserController::class,'index'])->name('user');
+        Route::get('/tambah_user',[UserController::class,'form_tambah'])->name('form_tambah');
+        route::post('/tambah_user/store',[UserController::class,'store'])->name('store_user');
     });
 });
 

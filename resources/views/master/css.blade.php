@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="{{asset('fonts/feather-font/css/iconfont.css')}} ">
 	<link rel="stylesheet" href="{{asset('vendors/flag-icon-css/css/flag-icon.min.css')}} ">
 	<link rel="stylesheet" href="{{asset('vendors/mdi/css/materialdesignicons.min.css')}}">
+	<link rel="stylesheet" href="{{asset('vendors/datatables.net-bs4/dataTables.bootstrap4.css')}}">
+	<link rel="stylesheet" href="{{asset('css/datatables.css')}}">
 	<!-- endinject -->
     <!-- Layout styles -->  
 	<link rel="stylesheet" href="{{asset('css/demo_1/style.css')}} ">
