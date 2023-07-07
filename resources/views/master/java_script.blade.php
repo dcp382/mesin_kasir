@@ -9,6 +9,8 @@
     <script src="{{asset('vendors/progressbar.js/progressbar.min.js')}} "></script>
 	<!-- end plugin js for this page -->
 	<!-- inject:js -->
+    <script src="{{asset('js/sweet-alert.js')}}"></script>
+    <script src="{{asset('vendors/sweetalert2/sweetalert2.min.js')}}"></script>
 	<script src="{{asset('vendors/feather-icons/feather.min.js')}} "></script>
 	<script src="{{asset('js/template.js')}} "></script>
     <script src="{{asset('js/data-table.js')}}"></script>
@@ -16,11 +18,10 @@
     <script src="{{asset('vendors/datatables.net/jquery.dataTables.js')}}"></script>
     <script src="{{asset('js/datatables.js')}}"></script>
     <script src="{{asset('js/form-validation.js')}}"></script>
-    <script>
-        $(document).ready( function () {
-        $('#myTable').DataTable();
-        });
-    </script>
+    <script src="{{asset('vendors/jquery-validation/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('js/data_table.js')}}"></script>
+    <script src="{{asset('js/hapus_data.js')}}"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<!-- endinject -->
     <!-- custom js for this page -->
     <script src="{{asset('js/dashboard.js')}} "></script>

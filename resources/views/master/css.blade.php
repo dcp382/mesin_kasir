@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="{{asset('vendors/mdi/css/materialdesignicons.min.css')}}">
 	<link rel="stylesheet" href="{{asset('vendors/datatables.net-bs4/dataTables.bootstrap4.css')}}">
 	<link rel="stylesheet" href="{{asset('css/datatables.css')}}">
+	<link rel="stylesheet" href="{{asset('vendors/sweetalert2/sweetalert2.min.css')}}">
 	<!-- endinject -->
     <!-- Layout styles -->  
 	<link rel="stylesheet" href="{{asset('css/demo_1/style.css')}} ">
