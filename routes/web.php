@@ -3,6 +3,8 @@
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\JenBarController;
+use App\Http\Controllers\PembelianController;
+use App\Http\Controllers\PenjualanController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\UserController;
@@ -31,9 +33,14 @@ Route::group(['middleware'=>['auth','admin']],function(){
         Route::get('/tambah_customer',[CustomerController::class,'form_tambah'])->name('form_tambah_customer');
         Route::post('/tambah_customer/store',[CustomerController::class,'store'])->name('store_customer');
         Route::delete('/customer/delete/{id}',[CustomerController::class,'destroy'])->name('hapus_customer'); //belum bisa
+        Route::get('/produk',[ProdukController::class,'index'])->name('produk');
+        Route::post('/produk/store',[ProdukController::class,'store'])->name('store_produk');
         Route::get('/jenis_barang',[JenBarController::class,'index'])->name('index_jenbar');
         Route::post('/jenis_barang/store',[JenBarController::class,'store'])->name('store_jenbar');
         Route::get('/supplier',[SupplierController::class,'index'])->name('index_supplier');
+        Route::post('/supplier/store',[SupplierController::class,'store'])->name('store_supplier');
+        Route::get('/pembelian',[PembelianController::class,'index'])->name('pembelian');
+        Route::get('/penjualan',[PenjualanController::class,'index'])->name('penjualan');
         Route::get('/user',[UserController::class,'index'])->name('user');
         Route::get('/tambah_user',[UserController::class,'form_tambah'])->name('form_tambah_user');
         route::post('/tambah_user/store',[UserController::class,'store'])->name('store_user');

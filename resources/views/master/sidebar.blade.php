@@ -47,7 +47,7 @@
             <div class="collapse" id="emails">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="#" class="nav-link">Produk</a>
+                  <a href="{{route('admin.produk')}}" class="nav-link">Produk</a>
                 </li>
                 <li class="nav-item">
                   <a href="{{route('admin.index_supplier')}}" class="nav-link">Supplier</a>
@@ -59,13 +59,13 @@
             </div>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('admin.pembelian')}}" class="nav-link">
               <i class="link-icon mdi mdi-arrow-down-bold-circle"></i>
               <span class="link-title">Pembelian </span>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('admin.penjualan')}}" class="nav-link">
               <i class="link-icon mdi mdi-arrow-up-bold-circle"></i>
               <span class="link-title">Penjualan </span>
             </a>

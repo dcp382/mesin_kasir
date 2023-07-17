@@ -14,4 +14,8 @@ class JenBar extends Model
     protected $fillable = [
         'jenis_barang'
     ];
+
+    public function produk(){
+        return $this->hasMany(Produk::class);
+    }
 }

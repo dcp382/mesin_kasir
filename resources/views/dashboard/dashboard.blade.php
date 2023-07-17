@@ -28,6 +28,24 @@
                   </div>
                 </div>
               </div>
+              <div class="col-md-2 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-baseline">
+                      <h6 class="card-title mb-0">   Supplier</h6>
+                      <div class="dropdown mb-2">
+                        <button class="btn p-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        </button>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6 col-md-12 col-xl-5">
+                        <h3 class="mb-2">{{$supplier}}</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="col-md-4 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">

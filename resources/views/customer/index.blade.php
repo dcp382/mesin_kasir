@@ -9,13 +9,17 @@
         </div>
         <div class="row mt-5">
             <div class="col-4 mt-3">
-                <a href="{{route('admin.form_tambah_customer')}}"><button class="btn btn-success"> Tambah data </button></a>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+                Tambah Data
+                </button>
             </div>
         </div>
         <div class="mt-2">
             <table class="table mt-3" id="myTable" >
                 <thead class="thead-dark">
+                    <th> No </th>
                     <th> Nama </th>
+                    <th> Jenis Kelamin</th>
                     <th> Alamat </th>
                     <th> Email </th>
                     <th> No. Telepon </th>
@@ -24,7 +28,13 @@
                 <tbody>
                     @foreach ($customer as $cus )
                     <tr>
+                        <td> {{$i++}}</td>
                         <td> {{$cus->nama}} </td>
+                        @if ($cus->jenis_kelamin == 1)
+                            <td>Laki - Laki </td>
+                        @else
+                            <td> Perempuan </td>
+                        @endif
                         <td> {{$cus->alamat}} </td>
                         <td> {{$cus->email}} </td>
                         <td> {{$cus->no_telepon}} </td>
@@ -39,4 +49,50 @@
             </table>
         </div>
     </div>
+
+    <!-- Modal Tambah Data -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Tambah Data Supplier</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form action="{{route('admin.store_customer')}}" method="post">
+                                @csrf
+                                <div class="modal-body">
+                                        <div class="form-group">
+                                    <label for="nama_pelanggan">Nama</label>
+                                    <input id="nama_pelanggan" class="form-control" name="nama_pelanggan" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                            <label for="jenis_kelamin">Jenis Kelamin</label>
+                                            <select name="jenis_kelamin" id="jenis_kelamin" class="form-select" aria-label="Default select example">
+                                                <option value="1">Laki - Laki</option>
+                                                <option value="2">Perempuan</option>
+                                            </select>
+                                        </div>
+                                    <div class="form-group">
+                                    <label for="alamat_pelanggan">Alamat</label>
+                                    <input id="alamat_pelanggan" class="form-control" name="alamat_pelanggan" type="text">
+                                    </div>
+									<div class="form-group">
+										<label for="email">Email address</label>
+										<input type="email" class="form-control" id="email" placeholder="Email" name="email">
+									</div>
+                                    <div class="form-group">
+                                    <label for="no_telepon">No. Telepon</label>
+                                    <input id="no_telepon" class="form-control" name="no_telepon" type="text">
+                                    </div>
+
+                                    <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary">Save changes</button>
+                                    </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
 @endsection

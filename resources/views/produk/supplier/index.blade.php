@@ -48,27 +48,39 @@
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Tambah Data Jenis Barang</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <form action="#" method="post">
-                            @csrf
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <label for="jenis_barang">Jenis Barang</label>
-                                    <input id="jenis_barang" class="form-control" name="jenis_barang" type="text">
-                                    </div>
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Tambah Data Supplier</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form action="{{route('admin.store_supplier')}}" method="post">
+                                @csrf
+                                <div class="modal-body">
+                                        <div class="form-group">
+                                            <label for="nama_supplier">Nama Supplier</label>
+                                            <input id="nama_supplier" class="form-control" name="nama_supplier" type="text">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="alamat_supplier">Alamat Supplier</label>
+                                            <input id="alamat_supplier" class="form-control" name="alamat_supplier" type="text">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="no_telepon">No. Telepon</label>
+                                            <input id="no_telepon" class="form-control" name="no_telepon" type="text">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Email Supplier</label>
+                                            <input id="email" class="form-control" name="email" type="text">
+                                        </div>
                                 </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Save changes</button>
-                            </div>
-                            </div>
-                        </form>
-                        
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                
+                            </form>
+                        </div>
                     </div>
                 </div>
     

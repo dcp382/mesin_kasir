@@ -8,7 +8,9 @@
         </div>
         <div class="row mt-5">
             <div class="col-4 mt-3">
-                <a href="{{route('admin.form_tambah_user')}}"><button class="btn btn-success"> Tambah data </button></a>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+                Tambah Data
+                </button>
             </div>
         </div>
         <div class="mt-2">
@@ -33,4 +35,48 @@
             </table>
         </div>
     </div>
+
+    <!-- Modal Tambah Data -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Tambah Data Supplier</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form action="{{route('admin.store_user')}}" method="post">
+                                @csrf
+                                <div class="form-group">
+                                        <label for="name">Nama</label>
+                                        <input id="name" class="form-control" name="name" type="text">
+                                    </div>
+									<div class="form-group">
+										<label for="email">Email address</label>
+										<input type="email" class="form-control" id="email" placeholder="Email" name="email">
+									</div>
+                                    <label for="role">Role</label>
+										<select class="role" id="role" name="role">
+											<option selected disabled>Role</option>
+											<option value="admin">Admin</option>
+											<option value="user">User</option>
+										</select>
+									<div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input id="password" class="form-control" name="password" type="password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="confirm_password">Confirm password</label>
+                                        <input id="confirm_password" class="form-control" name="confirm_password" type="password">
+                                    </div>
+
+                                    <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-primary">Save changes</button>
+                                    </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
 @endsection

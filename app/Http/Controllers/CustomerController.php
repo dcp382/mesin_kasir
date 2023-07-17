@@ -16,17 +16,15 @@ class CustomerController extends Controller
 
     public function index(){
         $customer = Customer::all();
+        $i = 1;
         
-        return view('customer.index',compact('customer'));
-    }
-
-    public function form_tambah(){
-        return view('customer.form_tambah');
+        return view('customer.index',compact('customer','i'));
     }
 
     public function store(Request $request){
         Customer::create([
             'nama' => $request->nama_pelanggan,
+            'jenis_kelamin' => $request->jenis_kelamin,
             'alamat' => $request->alamat_pelanggan,
             'email' => $request->email,
             'no_telepon' => $request->no_telepon
