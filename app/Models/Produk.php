@@ -21,10 +21,10 @@ class Produk extends Model
     ];
 
     public function jenbar(){
-        return $this->belongsTo(JenBar::class,'id_jenis_barang','id');
+        return $this->belongsTo(JenBar::class,'id_jenis_barang');
     } 
 
     public function supplier(){
-        return $this->belongsTo(Supplier::class,'id_supplier','id');
+        return $this->belongsTo(Supplier::class,'id_supplier');
     }
 }

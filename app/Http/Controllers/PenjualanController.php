@@ -9,6 +9,7 @@ class PenjualanController extends Controller
 {
     public function index(){
         $produk = Produk::all();
-        return view('penjualan.index', compact('produk'));
+        $i = 1;
+        return view('penjualan.index', compact('produk','i'));
     }
 }

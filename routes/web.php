@@ -3,6 +3,7 @@
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\JenBarController;
+use App\Http\Controllers\JenisPembayaranController;
 use App\Http\Controllers\PembelianController;
 use App\Http\Controllers\PenjualanController;
 use App\Http\Controllers\ProdukController;
@@ -39,7 +40,10 @@ Route::group(['middleware'=>['auth','admin']],function(){
         Route::post('/jenis_barang/store',[JenBarController::class,'store'])->name('store_jenbar');
         Route::get('/supplier',[SupplierController::class,'index'])->name('index_supplier');
         Route::post('/supplier/store',[SupplierController::class,'store'])->name('store_supplier');
+        Route::get('/pembayaran',[JenisPembayaranController::class,'index'])->name('pembayaran');
+        Route::post('/pembayaran/store',[JenisPembayaranController::class,'store'])->name('store_pembayaran');
         Route::get('/pembelian',[PembelianController::class,'index'])->name('pembelian');
+        Route::post('/pembelian/store',[PembelianController::class,'store'])->name('store_pembelian');
         Route::get('/penjualan',[PenjualanController::class,'index'])->name('penjualan');
         Route::get('/user',[UserController::class,'index'])->name('user');
         Route::get('/tambah_user',[UserController::class,'form_tambah'])->name('form_tambah_user');

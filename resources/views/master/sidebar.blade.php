@@ -55,6 +55,9 @@
                 <li class="nav-item">
                   <a href="{{route('admin.index_jenbar')}}" class="nav-link">Jenis Barang</a>
                 </li>
+                <li class="nav-item">
+                  <a href="{{route('admin.pembayaran')}}" class="nav-link">Jenis Pembayaran</a>
+                </li>
               </ul>
             </div>
           </li>

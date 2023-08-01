@@ -18,4 +18,8 @@ class JenBar extends Model
     public function produk(){
         return $this->hasMany(Produk::class);
     }
+
+    public function pembelian(){
+        return $this->hasMany(Pembelian::class);
+    }
 }
