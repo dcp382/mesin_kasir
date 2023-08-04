@@ -14,6 +14,7 @@
         <div class="page-wrapper">
         @include('master.navbar')
         @yield('konten')
+        @yield('modal')
         </div>
     </div>
 

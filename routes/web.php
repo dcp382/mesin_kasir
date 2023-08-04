@@ -45,6 +45,7 @@ Route::group(['middleware'=>['auth','admin']],function(){
         Route::get('/pembelian',[PembelianController::class,'index'])->name('pembelian');
         Route::post('/pembelian/store',[PembelianController::class,'store'])->name('store_pembelian');
         Route::get('/penjualan',[PenjualanController::class,'index'])->name('penjualan');
+        Route::get('add-to-cart/{id}', [PenjualanController::class, 'addToCart'])->name('add.to.cart');
         Route::get('/user',[UserController::class,'index'])->name('user');
         Route::get('/tambah_user',[UserController::class,'form_tambah'])->name('form_tambah_user');
         route::post('/tambah_user/store',[UserController::class,'store'])->name('store_user');
